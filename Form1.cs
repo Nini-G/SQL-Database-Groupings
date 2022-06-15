@@ -103,5 +103,10 @@ namespace SQLdatabase
             textBox1.Focus();
             con.Close();
         }
+        //Display Button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Display();
+        }
     }
 }
