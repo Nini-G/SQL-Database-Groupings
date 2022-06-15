@@ -86,5 +86,22 @@ namespace SQLdatabase
             con.Close();
         }
 
+        //Delete Button
+        private void button3_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con.Open();
+            int a = Convert.ToInt32(textBox1.Text);
+
+            cmd = new SqlCommand("DELETE FROM Employee_Salary_Table where Emp_Id='" + a + "'", con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("One record Deleted");
+            Display();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox1.Focus();
+            con.Close();
+        }
     }
 }
