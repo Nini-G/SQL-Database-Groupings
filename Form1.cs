@@ -29,7 +29,7 @@ namespace SQLdatabase
         //Create Display class
         private void Display()
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             cmd = new SqlCommand("Select * from Employee_Salary_Table", con);
             cmd.ExecuteNonQuery();
@@ -43,7 +43,7 @@ namespace SQLdatabase
         //Add Button
         private void button1_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             int a = Convert.ToInt32(textBox1.Text);
             string b = textBox2.Text;
@@ -73,7 +73,7 @@ namespace SQLdatabase
         //Update Button
         private void button2_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             int a = Convert.ToInt32(textBox1.Text);
             string b = textBox2.Text;
@@ -89,7 +89,7 @@ namespace SQLdatabase
         //Delete Button
         private void button3_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             int a = Convert.ToInt32(textBox1.Text);
 
@@ -112,7 +112,7 @@ namespace SQLdatabase
         //Search Button
         private void button5_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             int a = Convert.ToInt32(textBox1.Text);
             string abc = "SELECT Emp_ID,Emp_Name,Salary FROM Employee_Salary_Table where Emp_ID='" + a + "'";
@@ -135,7 +135,7 @@ namespace SQLdatabase
         //Total Records Button
         private void button7_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             cmd = new SqlCommand("select Count(*) from Employee_Salary_Table", con);
             int a = (int)cmd.ExecuteScalar();
