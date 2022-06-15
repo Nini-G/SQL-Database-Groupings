@@ -108,5 +108,23 @@ namespace SQLdatabase
         {
             Display();
         }
+
+        //Search Button
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con.Open();
+            int a = Convert.ToInt32(textBox1.Text);
+            string abc = "SELECT Emp_ID,Emp_Name,Salary FROM Employee_Salary_Table where Emp_ID='" + a + "'";
+            cmd = new SqlCommand(abc, con);
+            MessageBox.Show("one record search:");
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
     }
 }
