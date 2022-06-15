@@ -37,8 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
@@ -129,25 +129,25 @@
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(242, 316);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 38);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "SEARCH";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(71, 316);
+            this.button5.Location = new System.Drawing.Point(242, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(122, 38);
             this.button5.TabIndex = 9;
-            this.button5.Text = "DISPLAY";
+            this.button5.Text = "SEARCH";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(71, 316);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(122, 38);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "DISPLAY";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -187,8 +187,8 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -217,8 +217,8 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
         private Button button5;
+        private Button button4;
         private Button button6;
         private DataGridView dataGridView1;
         private Button button7;

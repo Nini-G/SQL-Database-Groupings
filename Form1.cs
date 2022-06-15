@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace SQLdatabase
 {
     public partial class Form1 : Form
@@ -6,5 +8,8 @@ namespace SQLdatabase
         {
             InitializeComponent();
         }
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter da;
     }
 }
