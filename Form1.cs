@@ -70,6 +70,21 @@ namespace SQLdatabase
             }
         }
 
+        //Update Button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con.Open();
+            int a = Convert.ToInt32(textBox1.Text);
+            string b = textBox2.Text;
+            int c = Convert.ToInt32(textBox3.Text);
+            string abc = "UPDATE Employee_Salary_Table SET Emp_Id ='" + a + "', Emp_Name ='" + b + "',Salary ='" + c + "' WHERE Emp_Id = '" + a + "'";
+            cmd = new SqlCommand(abc, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("One record updated");
+            Display();
+            con.Close();
+        }
 
     }
 }
