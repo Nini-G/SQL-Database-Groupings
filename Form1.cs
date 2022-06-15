@@ -131,5 +131,17 @@ namespace SQLdatabase
         {
             Application.Exit();
         }
+
+        //Total Records Button
+        private void button7_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection("Data Source=NBPC1958\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
+            con.Open();
+            cmd = new SqlCommand("select Count(*) from Employee_Salary_Table", con);
+            int a = (int)cmd.ExecuteScalar();
+            MessageBox.Show("Total Records: " + a.ToString());
+            con.Close();
+        }
+
     }
 }
