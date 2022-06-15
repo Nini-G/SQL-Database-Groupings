@@ -11,5 +11,13 @@ namespace SQLdatabase
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter da;
+
+        //Main
+        public static void main(string[] args)
+        {
+            Application.Run(new Form1());
+        }
+
+
     }
 }
