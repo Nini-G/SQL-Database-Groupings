@@ -57,5 +57,19 @@ namespace SQLdatabase
             textBox2.Clear();
             textBox3.Clear();
         }
+
+        //DataGridView: Event – CellClick
+        //SelectionMode = FullRowSelect
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            }
+        }
+
+
     }
 }
