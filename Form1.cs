@@ -115,7 +115,7 @@ namespace SQLdatabase
             con = new SqlConnection("Data Source=MAJO-PC\\SQLEXPRESS;Initial Catalog=employeeSalary;Integrated Security=True");
             con.Open();
             int a = Convert.ToInt32(textBox1.Text);
-            string abc = "SELECT Emp_ID,Emp_Name,Salary FROM Employee_Salary_Table where Emp_ID='" + a + "'";
+            string abc = "SELECT Emp_Id,Emp_Name,Salary FROM Employee_Salary_Table where Emp_Id='" + a + "'";
             cmd = new SqlCommand(abc, con);
             MessageBox.Show("one record search:");
             SqlDataReader dr;
